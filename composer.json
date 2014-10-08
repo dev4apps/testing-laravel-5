@@ -1,7 +1,7 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "hernandev/testing-laravel-5",
+	"description": "Laravel 5 demo project.",
+	"keywords": ["laravel5", "testing-laravel", "laravel-demo"],
 	"license": "MIT",
 	"type": "project",
 	"require": {
