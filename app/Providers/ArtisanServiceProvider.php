@@ -1,35 +1,35 @@
-<?php namespace App\Providers;
+<?php namespace Hernandev\Sandbox\Providers;
 
 use InspireCommand;
 use Illuminate\Support\ServiceProvider;
 
-class ArtisanServiceProvider extends ServiceProvider {
-
-	/**
+class ArtisanServiceProvider extends ServiceProvider
+{
+    /**
 	 * Indicates if loading of the provider is deferred.
 	 *
 	 * @var bool
 	 */
-	protected $defer = true;
+    protected $defer = true;
 
-	/**
+    /**
 	 * Register the service provider.
 	 *
 	 * @return void
 	 */
-	public function register()
-	{
-		$this->commands('App\Console\InspireCommand');
-	}
+    public function register()
+    {
+        $this->commands('Hernandev\Sandbox\Console\InspireCommand');
+    }
 
-	/**
+    /**
 	 * Get the services provided by the provider.
 	 *
 	 * @return array
 	 */
-	public function provides()
-	{
-		return ['App\Console\InspireCommand'];
-	}
+    public function provides()
+    {
+        return ['Hernandev\Sandbox\Console\InspireCommand'];
+    }
 
 }

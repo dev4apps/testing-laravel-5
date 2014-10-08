@@ -2,7 +2,7 @@
 
 return [
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| PDO Fetch Style
 	|--------------------------------------------------------------------------
@@ -13,9 +13,9 @@ return [
 	|
 	*/
 
-	'fetch' => PDO::FETCH_CLASS,
+    'fetch' => PDO::FETCH_CLASS,
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Default Database Connection Name
 	|--------------------------------------------------------------------------
@@ -26,9 +26,9 @@ return [
 	|
 	*/
 
-	'default' => 'mysql',
+    'default' => 'mysql',
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Database Connections
 	|--------------------------------------------------------------------------
@@ -44,48 +44,48 @@ return [
 	|
 	*/
 
-	'connections' => [
+    'connections' => [
 
-		'sqlite' => [
-			'driver'   => 'sqlite',
-			'database' => storage_path().'/database.sqlite',
-			'prefix'   => '',
-		],
+        'sqlite' => [
+            'driver'   => 'sqlite',
+            'database' => storage_path().'/database.sqlite',
+            'prefix'   => '',
+        ],
 
-		'mysql' => [
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		],
+        'mysql' => [
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'forge',
+            'username'  => 'forge',
+            'password'  => '',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ],
 
-		'pgsql' => [
-			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'forge',
-			'username' => 'forge',
-			'password' => '',
-			'charset'  => 'utf8',
-			'prefix'   => '',
-			'schema'   => 'public',
-		],
+        'pgsql' => [
+            'driver'   => 'pgsql',
+            'host'     => 'localhost',
+            'database' => 'forge',
+            'username' => 'forge',
+            'password' => '',
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ],
 
-		'sqlsrv' => [
-			'driver'   => 'sqlsrv',
-			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
-			'password' => '',
-			'prefix'   => '',
-		],
+        'sqlsrv' => [
+            'driver'   => 'sqlsrv',
+            'host'     => 'localhost',
+            'database' => 'database',
+            'username' => 'root',
+            'password' => '',
+            'prefix'   => '',
+        ],
 
-	],
+    ],
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Migration Repository Table
 	|--------------------------------------------------------------------------
@@ -96,9 +96,9 @@ return [
 	|
 	*/
 
-	'migrations' => 'migrations',
+    'migrations' => 'migrations',
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Redis Databases
 	|--------------------------------------------------------------------------
@@ -109,16 +109,16 @@ return [
 	|
 	*/
 
-	'redis' => [
+    'redis' => [
 
-		'cluster' => false,
+        'cluster' => false,
 
-		'default' => [
-			'host'     => '127.0.0.1',
-			'port'     => 6379,
-			'database' => 0,
-		],
+        'default' => [
+            'host'     => '127.0.0.1',
+            'port'     => 6379,
+            'database' => 0,
+        ],
 
-	],
+    ],
 
 ];

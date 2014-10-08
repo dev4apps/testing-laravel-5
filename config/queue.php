@@ -2,7 +2,7 @@
 
 return [
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Default Queue Driver
 	|--------------------------------------------------------------------------
@@ -15,9 +15,9 @@ return [
 	|
 	*/
 
-	'default' => 'sync',
+    'default' => 'sync',
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Queue Connections
 	|--------------------------------------------------------------------------
@@ -28,44 +28,44 @@ return [
 	|
 	*/
 
-	'connections' => [
+    'connections' => [
 
-		'sync' => [
-			'driver' => 'sync',
-		],
+        'sync' => [
+            'driver' => 'sync',
+        ],
 
-		'beanstalkd' => [
-			'driver' => 'beanstalkd',
-			'host'   => 'localhost',
-			'queue'  => 'default',
-			'ttr'    => 60,
-		],
+        'beanstalkd' => [
+            'driver' => 'beanstalkd',
+            'host'   => 'localhost',
+            'queue'  => 'default',
+            'ttr'    => 60,
+        ],
 
-		'sqs' => [
-			'driver' => 'sqs',
-			'key'    => 'your-public-key',
-			'secret' => 'your-secret-key',
-			'queue'  => 'your-queue-url',
-			'region' => 'us-east-1',
-		],
+        'sqs' => [
+            'driver' => 'sqs',
+            'key'    => 'your-public-key',
+            'secret' => 'your-secret-key',
+            'queue'  => 'your-queue-url',
+            'region' => 'us-east-1',
+        ],
 
-		'iron' => [
-			'driver'  => 'iron',
-			'host'    => 'mq-aws-us-east-1.iron.io',
-			'token'   => 'your-token',
-			'project' => 'your-project-id',
-			'queue'   => 'your-queue-name',
-			'encrypt' => true,
-		],
+        'iron' => [
+            'driver'  => 'iron',
+            'host'    => 'mq-aws-us-east-1.iron.io',
+            'token'   => 'your-token',
+            'project' => 'your-project-id',
+            'queue'   => 'your-queue-name',
+            'encrypt' => true,
+        ],
 
-		'redis' => [
-			'driver' => 'redis',
-			'queue'  => 'default',
-		],
+        'redis' => [
+            'driver' => 'redis',
+            'queue'  => 'default',
+        ],
 
-	],
+    ],
 
-	/*
+    /*
 	|--------------------------------------------------------------------------
 	| Failed Queue Jobs
 	|--------------------------------------------------------------------------
@@ -76,8 +76,8 @@ return [
 	|
 	*/
 
-	'failed' => [
-		'database' => 'mysql', 'table' => 'failed_jobs',
-	],
+    'failed' => [
+        'database' => 'mysql', 'table' => 'failed_jobs',
+    ],
 
 ];
