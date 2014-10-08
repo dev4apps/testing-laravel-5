@@ -1,45 +1,44 @@
-<?php namespace App\Http\Middleware;
+<?php namespace Hernandev\Sandbox\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\Auth\Authenticator;
 use Illuminate\Contracts\Routing\Middleware;
 
-class GuestMiddleware implements Middleware {
-
-	/**
+class GuestMiddleware implements Middleware
+{
+    /**
 	 * The authenticator implementation.
 	 *
 	 * @var Authenticator
 	 */
-	protected $auth;
+    protected $auth;
 
-	/**
+    /**
 	 * Create a new filter instance.
 	 *
 	 * @param  Authenticator  $auth
 	 * @return void
 	 */
-	public function __construct(Authenticator $auth)
-	{
-		$this->auth = $auth;
-	}
+    public function __construct(Authenticator $auth)
+    {
+        $this->auth = $auth;
+    }
 
-	/**
+    /**
 	 * Handle an incoming request.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @param  \Closure  $next
 	 * @return mixed
 	 */
-	public function handle($request, Closure $next)
-	{
-		if ($this->auth->check())
-		{
-			return new RedirectResponse(url('/'));
-		}
+    public function handle($request, Closure $next)
+    {
+        if ($this->auth->check()) {
+            return new RedirectResponse(url('/'));
+        }
 
-		return $next($request);
-	}
+        return $next($request);
+    }
 
 }

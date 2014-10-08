@@ -1,8 +1,8 @@
-<?php namespace App\Http\Controllers;
+<?php namespace Hernandev\Sandbox\Http\Controllers;
 
-class HomeController {
-
-	/*
+class HomeController
+{
+    /*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
 	|--------------------------------------------------------------------------
@@ -15,12 +15,12 @@ class HomeController {
 	|
 	*/
 
-	/**
+    /**
 	 * @Get("/", as="home")
 	 */
-	public function index()
-	{
-		return view('hello');
-	}
+    public function index()
+    {
+        return view('hello');
+    }
 
 }
