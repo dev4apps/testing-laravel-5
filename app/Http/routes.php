@@ -12,3 +12,14 @@
 */
 
 $router->get('/', 'HomeController@index');
+
+
+$router->group(
+    [
+        'middleware'    =>  ['locale'],
+        'prefix'        =>  '{locale}'
+    ], function ($router) {
+        $router->get('foo', 'FooController@index');
+        $router->get('foo/{slug}', 'FooController@show');
+    }
+);

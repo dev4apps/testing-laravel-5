@@ -16,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
         'auth.basic' => 'Hernandev\Sandbox\Http\Middleware\BasicAuthMiddleware',
         'csrf' => 'Hernandev\Sandbox\Http\Middleware\CsrfMiddleware',
         'guest' => 'Hernandev\Sandbox\Http\Middleware\GuestMiddleware',
+        'locale' => 'Hernandev\Sandbox\Http\Middleware\LocaleMiddleware'
     ];
 
     /**
