@@ -14,18 +14,18 @@ class LocaleMiddleware implements Middleware
 	 */
     public function handle($request, Closure $next)
     {
-		$this->detectLocale(app()->router->getCurrentRoute());
-		return $next($request);
+        $this->detectLocale(app()->router->getCurrentRoute());
+        return $next($request);
     }
 
-	public function detectLocale(\Illuminate\Routing\Route $route)
-	{
-		// gets the locale from parameter
-		$locale = $route->getParameter('locale');
-		// set the current request app locale
-		app()->setLocale($locale);
-		// remove the locale parameter from the current route
-		$route->forgetParameter('locale');
-	}
+    public function detectLocale(\Illuminate\Routing\Route $route)
+    {
+        // gets the locale from parameter
+        $locale = $route->getParameter('locale');
+        // set the current request app locale
+        app()->setLocale($locale);
+        // remove the locale parameter from the current route
+        $route->forgetParameter('locale');
+    }
 
 }
