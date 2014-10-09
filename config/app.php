@@ -104,6 +104,7 @@ return [
         'Hernandev\Sandbox\Providers\EventServiceProvider',
         'Hernandev\Sandbox\Providers\LogServiceProvider',
         'Hernandev\Sandbox\Providers\RouteServiceProvider',
+        'Hernandev\Sandbox\Providers\MarkdownServiceProvider',
 
         /*
 		 * Laravel Framework Service Providers...
